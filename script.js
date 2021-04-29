@@ -29,12 +29,14 @@ const msgComponents = {
     `The Professor`,
     `Rudy the Magic Guy`
   ]
-}
+};
 
 const generateMessage = () => {
-  const verbs = msgComponents[verbs];
-  const nouns = msgComponents[nouns];
-  const quotees = msgComponents[quotees];
+  const verbsList = msgComponents['verbs'];
+  const nounsList = msgComponents['nouns'];
+  const quoteesList = msgComponents['quotees'];
 
-  return `"You ${verbs[Math.floor(Math.random() * verbs.length)]} ${nouns[Math.floor(Math.random() * nouns.length)]}" - ${quotees[Math.floor(Math.random() * quotees.length)]}`;
+  return `"You ${verbsList[Math.floor(Math.random() * verbsList.length)]} ${nounsList[Math.floor(Math.random() * nounsList.length)]}" - ${quoteesList[Math.floor(Math.random() * quoteesList.length)]}`;
 }
+
+console.log(generateMessage());
